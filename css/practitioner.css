@@ -1,0 +1,69 @@
+/* Practitioner Mode Styles */
+
+.practice-mode-active {
+  overflow: hidden;
+}
+
+.practice-mode-active .nav-button:not([data-target="practitioner"]),
+.practice-mode-active .theme-switch,
+.practice-mode-active #exportBtn {
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+#codeEditor {
+  font-family: monospace;
+  min-height: 300px;
+  resize: vertical;
+  tab-size: 2;
+  line-height: 1.5;
+  background-color: #f8fafc;
+  color: #334155;
+}
+
+.dark-mode #codeEditor {
+  background-color: #1e293b;
+  color: #e2e8f0;
+}
+
+.timer-container {
+  font-family: monospace;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.question-container {
+  max-height: 300px;
+  overflow-y: auto;
+  padding-right: 10px;
+}
+
+.question-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.question-container::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+.question-container::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+
+.question-container::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+.dark-mode .question-container::-webkit-scrollbar-track {
+  background: #334155;
+}
+
+.dark-mode .question-container::-webkit-scrollbar-thumb {
+  background: #475569;
+}
+
+.dark-mode .question-container::-webkit-scrollbar-thumb:hover {
+  background: #64748b;
+}

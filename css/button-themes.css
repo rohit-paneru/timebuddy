@@ -1,0 +1,93 @@
+/* Button Themes for Light and Dark Mode */
+
+/* Default button styles */
+.nav-button {
+  transition: all 0.2s ease-in-out;
+}
+
+/* Light mode button styles */
+.nav-button.teal-theme {
+  background-color: #14b8a6;
+  color: white;
+}
+
+.nav-button.teal-theme:hover {
+  background-color: #0d9488;
+}
+
+.nav-button.amber-theme {
+  background-color: #f59e0b;
+  color: white;
+}
+
+.nav-button.amber-theme:hover {
+  background-color: #d97706;
+}
+
+/* Purple theme */
+.nav-button.purple-theme {
+  background-color: #8b5cf6;
+  color: white;
+}
+
+.nav-button.purple-theme:hover {
+  background-color: #7c3aed;
+}
+
+/* Blue theme */
+.nav-button.blue-theme {
+  background-color: #3b82f6;
+  color: white;
+}
+
+.nav-button.blue-theme:hover {
+  background-color: #2563eb;
+}
+
+/* Dark mode button styles */
+[data-theme="dark"] .nav-button.teal-theme {
+  background-color: #0d9488;
+  color: white;
+}
+
+[data-theme="dark"] .nav-button.teal-theme:hover {
+  background-color: #0f766e;
+}
+
+[data-theme="dark"] .nav-button.amber-theme {
+  background-color: #d97706;
+  color: white;
+}
+
+[data-theme="dark"] .nav-button.amber-theme:hover {
+  background-color: #b45309;
+}
+
+/* Dark mode purple theme */
+[data-theme="dark"] .nav-button.purple-theme {
+  background-color: #7c3aed;
+  color: white;
+}
+
+[data-theme="dark"] .nav-button.purple-theme:hover {
+  background-color: #6d28d9;
+}
+
+/* Dark mode blue theme */
+[data-theme="dark"] .nav-button.blue-theme {
+  background-color: #2563eb;
+  color: white;
+}
+
+[data-theme="dark"] .nav-button.blue-theme:hover {
+  background-color: #1d4ed8;
+}
+
+/* Active button styles */
+.nav-button.active {
+  box-shadow: 0 0 0 2px white, 0 0 0 4px currentColor;
+}
+
+[data-theme="dark"] .nav-button.active {
+  box-shadow: 0 0 0 2px #1c1917, 0 0 0 4px currentColor;
+}

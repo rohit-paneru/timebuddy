@@ -1,0 +1,470 @@
+/* Gamification Elements CSS */
+
+/* Achievement Badges */
+.badge-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.achievement-badge {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: #f5f5f4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.achievement-badge.locked {
+  filter: grayscale(100%);
+  opacity: 0.5;
+}
+
+.achievement-badge:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.badge-icon {
+  font-size: 2rem;
+  margin-bottom: 0.25rem;
+}
+
+.badge-name {
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-align: center;
+  line-height: 1;
+}
+
+.badge-tooltip {
+  position: absolute;
+  bottom: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #1c1917;
+  color: white;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  font-size: 0.75rem;
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.achievement-badge:hover .badge-tooltip {
+  opacity: 1;
+}
+
+/* XP Progress Bar */
+.xp-container {
+  margin-bottom: 1.5rem;
+}
+
+.xp-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.xp-level {
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: #0ea5e9;
+}
+
+.xp-points {
+  font-size: 0.875rem;
+  color: #78716c;
+}
+
+.xp-bar-container {
+  height: 12px;
+  background-color: #e7e5e4;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.xp-bar {
+  height: 100%;
+  background: linear-gradient(90deg, #0ea5e9, #14b8a6);
+  border-radius: 6px;
+  transition: width 0.5s ease;
+}
+
+.xp-notification {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #0ea5e9;
+  color: white;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  z-index: 1000;
+  transform: translateY(100px);
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+
+.xp-notification.show {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* Skill Trees */
+.skill-tree-container {
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+.skill-category {
+  margin-bottom: 1.5rem;
+}
+
+.skill-category-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #0f766e;
+}
+
+.skill-tree {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.skill-level {
+  display: flex;
+  gap: 1rem;
+  position: relative;
+}
+
+.skill-level::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 40px;
+  width: 2px;
+  background-color: #d6d3d1;
+  z-index: 0;
+}
+
+.skill-node {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: white;
+  border: 2px solid #d6d3d1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.skill-node.active {
+  border-color: #0ea5e9;
+  background-color: #e0f2fe;
+}
+
+.skill-node.completed {
+  border-color: #14b8a6;
+  background-color: #ccfbf1;
+}
+
+.skill-node.locked {
+  background-color: #f5f5f4;
+  cursor: not-allowed;
+}
+
+.skill-node:hover:not(.locked) {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.skill-icon {
+  font-size: 1.5rem;
+  margin-bottom: 0.25rem;
+}
+
+.skill-name {
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-align: center;
+  line-height: 1;
+}
+
+.skill-connector {
+  position: absolute;
+  background-color: #d6d3d1;
+  z-index: 0;
+}
+
+.skill-connector.active {
+  background-color: #0ea5e9;
+}
+
+/* Daily Challenges */
+.challenge-container {
+  background-color: #f8fafc;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-left: 4px solid #0ea5e9;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.challenge-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.challenge-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #0f172a;
+}
+
+.challenge-difficulty {
+  font-size: 0.75rem;
+  font-weight: 500;
+  padding: 0.25rem 0.5rem;
+  border-radius: 9999px;
+}
+
+.difficulty-easy {
+  background-color: #dcfce7;
+  color: #166534;
+}
+
+.difficulty-medium {
+  background-color: #fef9c3;
+  color: #854d0e;
+}
+
+.difficulty-hard {
+  background-color: #fee2e2;
+  color: #b91c1c;
+}
+
+.challenge-description {
+  margin-bottom: 1.5rem;
+  color: #334155;
+  line-height: 1.5;
+}
+
+.challenge-actions {
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.challenge-button {
+  padding: 0.5rem 1rem;
+  border-radius: 0.375rem;
+  font-weight: 500;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.challenge-button.primary {
+  background-color: #0ea5e9;
+  color: white;
+}
+
+.challenge-button.primary:hover {
+  background-color: #0284c7;
+}
+
+.challenge-button.secondary {
+  background-color: #e2e8f0;
+  color: #475569;
+}
+
+.challenge-button.secondary:hover {
+  background-color: #cbd5e1;
+}
+
+.challenge-reward {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  color: #64748b;
+}
+
+.reward-xp {
+  font-weight: 600;
+  color: #0ea5e9;
+}
+
+.challenge-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #0f766e;
+}
+
+.challenge-difficulty {
+  font-size: 0.875rem;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-weight: 500;
+}
+
+.difficulty-easy {
+  background-color: #dcfce7;
+  color: #166534;
+}
+
+.difficulty-medium {
+  background-color: #fef3c7;
+  color: #92400e;
+}
+
+.difficulty-hard {
+  background-color: #fee2e2;
+  color: #b91c1c;
+}
+
+.challenge-description {
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+.challenge-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.challenge-button {
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  font-weight: 500;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.challenge-button.primary {
+  background-color: #0ea5e9;
+  color: white;
+}
+
+.challenge-button.primary:hover {
+  background-color: #0284c7;
+}
+
+.challenge-button.secondary {
+  background-color: #e0f2fe;
+  color: #0284c7;
+}
+
+.challenge-button.secondary:hover {
+  background-color: #bae6fd;
+}
+
+.challenge-reward {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  font-size: 0.875rem;
+  color: #78716c;
+}
+
+.reward-xp {
+  font-weight: 600;
+  color: #0ea5e9;
+}
+
+/* Dark mode support */
+[data-theme="dark"] .achievement-badge {
+  background-color: var(--bg-tertiary);
+}
+
+[data-theme="dark"] .badge-tooltip {
+  background-color: var(--bg-tertiary);
+  color: var(--text-primary);
+}
+
+[data-theme="dark"] .xp-bar-container {
+  background-color: var(--bg-tertiary);
+}
+
+[data-theme="dark"] .skill-node {
+  background-color: var(--bg-secondary);
+  border-color: var(--border-color);
+}
+
+[data-theme="dark"] .skill-node.active {
+  border-color: var(--accent-secondary);
+  background-color: #164e63;
+}
+
+[data-theme="dark"] .skill-node.completed {
+  border-color: var(--accent-primary);
+  background-color: #134e4a;
+}
+
+[data-theme="dark"] .skill-node.locked {
+  background-color: var(--bg-tertiary);
+}
+
+[data-theme="dark"] .skill-level::before,
+[data-theme="dark"] .skill-connector {
+  background-color: var(--border-color);
+}
+
+[data-theme="dark"] .skill-connector.active {
+  background-color: var(--accent-secondary);
+}
+
+[data-theme="dark"] .challenge-container {
+  background-color: var(--bg-secondary);
+  border-left-color: var(--accent-secondary);
+}
+
+[data-theme="dark"] .difficulty-easy {
+  background-color: #064e3b;
+  color: #86efac;
+}
+
+[data-theme="dark"] .difficulty-medium {
+  background-color: #78350f;
+  color: #fcd34d;
+}
+
+[data-theme="dark"] .difficulty-hard {
+  background-color: #7f1d1d;
+  color: #fca5a5;
+}
+
+[data-theme="dark"] .challenge-button.secondary {
+  background-color: #164e63;
+  color: #7dd3fc;
+}
+
+[data-theme="dark"] .challenge-button.secondary:hover {
+  background-color: #155e75;
+}

@@ -1,0 +1,120 @@
+/**
+ * CSS for new features
+ */
+
+/* Progress Tracking */
+.progress-container {
+  width: 100%;
+  background-color: #e7e5e4;
+  border-radius: 0.5rem;
+  height: 0.75rem;
+  overflow: hidden;
+  margin: 0.5rem 0;
+}
+
+.progress-bar {
+  height: 100%;
+  background-color: #0ea5e9;
+  transition: width 0.3s ease;
+}
+
+.chart-container {
+  position: relative;
+  height: 200px;
+  margin-bottom: 1rem;
+}
+
+/* Study Resources */
+.resource-category-btn.active {
+  background-color: #d6d3d1;
+  font-weight: 500;
+}
+
+/* Theme Customizer Removed */
+
+/* Theme customization removed */
+
+/* Calendar */
+.calendar-grid {
+  width: 100%;
+}
+
+.calendar-day {
+  aspect-ratio: 1;
+  min-height: 80px;
+}
+
+.calendar-day.empty {
+  background-color: transparent;
+}
+
+.calendar-day:not(.empty) {
+  cursor: pointer;
+}
+
+.task-completed {
+  text-decoration: line-through;
+  color: #78716c;
+}
+
+/* Dark Mode Compatibility */
+[data-theme="dark"] .progress-container {
+  background-color: #44403c;
+}
+
+[data-theme="dark"] .progress-bar {
+  background-color: #0ea5e9;
+}
+
+[data-theme="dark"] .resource-category-btn.active {
+  background-color: #57534e;
+}
+
+[data-theme="dark"] #themeCustomizerModal .bg-white,
+[data-theme="dark"] #exportCalendarModal .bg-white,
+[data-theme="dark"] #addResourceModal .bg-white {
+  background-color: #292524 !important;
+  color: #e7e5e4;
+}
+
+[data-theme="dark"] input,
+[data-theme="dark"] select,
+[data-theme="dark"] textarea {
+  background-color: #1c1917 !important;
+  border-color: #44403c !important;
+  color: #e7e5e4 !important;
+}
+
+[data-theme="dark"] label {
+  color: #e7e5e4 !important;
+}
+
+[data-theme="dark"] .calendar-day:not(.empty) > div {
+  background-color: #292524;
+  color: #e7e5e4;
+}
+
+[data-theme="dark"] .calendar-day:not(.empty) > div:hover {
+  background-color: #1c1917;
+}
+
+/* Responsive Design */
+@media (max-width: 640px) {
+  .calendar-day {
+    min-height: 60px;
+  }
+
+  .chart-container {
+    height: 180px;
+  }
+}
+
+@media (max-width: 480px) {
+  .calendar-day {
+    min-height: 50px;
+  }
+
+  .chart-container {
+    height: 160px;
+  }
+}

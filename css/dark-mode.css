@@ -1,0 +1,372 @@
+/* Dark Mode Styles */
+[data-theme="dark"] {
+  --bg-primary: #1c1917;
+  --bg-secondary: #292524;
+  --bg-tertiary: #44403c;
+  --text-primary: #e7e5e4;
+  --text-secondary: #a8a29e;
+  --accent-primary: #14b8a6;
+  --accent-secondary: #0ea5e9;
+  --border-color: #44403c;
+  --shadow-color: rgba(0, 0, 0, 0.3);
+  --scrollbar-track: #292524;
+  --scrollbar-thumb: #57534e;
+  --scrollbar-thumb-hover: #78716c;
+  --focus-outline: #0ea5e9;
+  --focus-bg: #164e63;
+  --completed-text: #a8a29e;
+  --table-header-bg: #1c1917;
+  --table-row-bg: #292524;
+  --table-row-alt-bg: #1c1917;
+  --table-border: #44403c;
+  --button-bg: #0d9488;
+  --button-hover-bg: #0f766e;
+  --button-text: #f5f5f4;
+  --input-bg: #292524;
+  --input-border: #44403c;
+  --input-text: #e7e5e4;
+  --card-bg: #292524;
+  --card-border: #44403c;
+}
+
+/* Dark mode overrides for Tailwind classes */
+[data-theme="dark"] .bg-white,
+[data-theme="dark"] .bg-stone-50,
+[data-theme="dark"] .bg-stone-100 {
+  background-color: var(--bg-secondary) !important;
+}
+
+[data-theme="dark"] .bg-stone-200 {
+  background-color: var(--bg-tertiary) !important;
+}
+
+[data-theme="dark"] .bg-purple-100 {
+  background-color: #4c1d95 !important;
+}
+
+[data-theme="dark"] .bg-blue-100 {
+  background-color: #1e40af !important;
+}
+
+[data-theme="dark"] .bg-sky-100 {
+  background-color: #0c4a6e !important;
+}
+
+/* Badge backgrounds in dark mode */
+[data-theme="dark"] .bg-green-100 {
+  background-color: #064e3b !important;
+}
+
+[data-theme="dark"] .bg-amber-100 {
+  background-color: #78350f !important;
+}
+
+[data-theme="dark"] .bg-red-100 {
+  background-color: #7f1d1d !important;
+}
+
+[data-theme="dark"] .text-stone-500,
+[data-theme="dark"] .text-stone-600,
+[data-theme="dark"] .text-stone-700,
+[data-theme="dark"] .text-stone-800 {
+  color: var(--text-primary) !important;
+}
+
+/* Ensure badge text colors are visible in dark mode */
+[data-theme="dark"] .text-purple-800 {
+  color: #d8b4fe !important;
+}
+
+[data-theme="dark"] .text-blue-800 {
+  color: #93c5fd !important;
+}
+
+[data-theme="dark"] .text-sky-800 {
+  color: #7dd3fc !important;
+}
+
+[data-theme="dark"] .text-green-800 {
+  color: #86efac !important;
+}
+
+[data-theme="dark"] .text-amber-800 {
+  color: #fcd34d !important;
+}
+
+[data-theme="dark"] .text-red-800 {
+  color: #fca5a5 !important;
+}
+
+[data-theme="dark"] .border-stone-200,
+[data-theme="dark"] .border-stone-300 {
+  border-color: var(--border-color) !important;
+}
+
+[data-theme="dark"] .border-purple-200 {
+  border-color: #7c3aed !important;
+}
+
+[data-theme="dark"] .border-blue-200 {
+  border-color: #2563eb !important;
+}
+
+[data-theme="dark"] .border-sky-200 {
+  border-color: #0ea5e9 !important;
+}
+
+/* Border left colors for cards */
+[data-theme="dark"] .border-l-4.border-sky-500 {
+  border-left-color: #0ea5e9 !important;
+}
+
+[data-theme="dark"] .border-l-4.border-purple-500 {
+  border-left-color: #8b5cf6 !important;
+}
+
+[data-theme="dark"] .border-l-4.border-blue-500 {
+  border-left-color: #3b82f6 !important;
+}
+
+/* Table styles for dark mode */
+[data-theme="dark"] table {
+  border-color: var(--table-border);
+}
+
+[data-theme="dark"] thead {
+  background-color: var(--table-header-bg);
+}
+
+[data-theme="dark"] tbody tr {
+  background-color: var(--table-row-bg);
+}
+
+[data-theme="dark"] tbody tr:nth-child(even) {
+  background-color: var(--table-row-alt-bg);
+}
+
+/* Form elements in dark mode */
+[data-theme="dark"] input[type="text"],
+[data-theme="dark"] input[type="email"],
+[data-theme="dark"] input[type="password"],
+[data-theme="dark"] textarea,
+[data-theme="dark"] select {
+  background-color: var(--input-bg);
+  border-color: var(--input-border);
+  color: var(--input-text);
+}
+
+/* Card styles in dark mode */
+[data-theme="dark"] .card,
+[data-theme="dark"] .rounded-lg {
+  background-color: var(--card-bg);
+  border-color: var(--card-border);
+}
+
+/* Button styles in dark mode */
+[data-theme="dark"] .bg-teal-500 {
+  background-color: var(--button-bg) !important;
+}
+
+[data-theme="dark"] .bg-teal-500:hover,
+[data-theme="dark"] .hover\:bg-teal-600:hover {
+  background-color: var(--button-hover-bg) !important;
+}
+
+/* Sky colored buttons */
+[data-theme="dark"] .bg-sky-500 {
+  background-color: var(--accent-secondary) !important;
+}
+
+[data-theme="dark"] .bg-sky-500:hover,
+[data-theme="dark"] .hover\:bg-sky-600:hover {
+  background-color: #0284c7 !important;
+}
+
+/* Purple colored buttons */
+[data-theme="dark"] .bg-purple-500 {
+  background-color: #7c3aed !important;
+}
+
+[data-theme="dark"] .bg-purple-500:hover,
+[data-theme="dark"] .hover\:bg-purple-600:hover {
+  background-color: #6d28d9 !important;
+}
+
+/* Blue colored buttons */
+[data-theme="dark"] .bg-blue-500 {
+  background-color: #2563eb !important;
+}
+
+[data-theme="dark"] .bg-blue-500:hover,
+[data-theme="dark"] .hover\:bg-blue-600:hover {
+  background-color: #1d4ed8 !important;
+}
+
+/* Text colors for headings */
+[data-theme="dark"] .text-teal-700,
+[data-theme="dark"] .text-sky-700,
+[data-theme="dark"] .text-sky-800,
+[data-theme="dark"] .text-purple-700,
+[data-theme="dark"] .text-purple-800,
+[data-theme="dark"] .text-blue-700,
+[data-theme="dark"] .text-blue-800 {
+  color: var(--text-primary) !important;
+}
+
+/* Toggle Switch for Dark Mode */
+.theme-switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 30px;
+}
+
+.theme-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 30px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 22px;
+  width: 22px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: var(--accent-primary);
+}
+
+input:checked + .slider:before {
+  transform: translateX(30px);
+}
+
+/* Classes added by JavaScript for elements that don't use CSS variables */
+.dark-mode-table {
+  background-color: var(--bg-secondary);
+  color: var(--text-primary);
+  border-color: var(--border-color);
+}
+
+.dark-mode-table th {
+  background-color: var(--bg-tertiary);
+  color: var(--text-primary);
+}
+
+.dark-mode-table td {
+  border-color: var(--border-color);
+}
+
+.dark-mode-bg {
+  background-color: var(--bg-secondary) !important;
+}
+
+.dark-mode-text {
+  color: var(--text-primary) !important;
+}
+
+.dark-mode-heading {
+  color: var(--text-primary) !important;
+}
+
+.dark-mode-button {
+  background-color: var(--button-bg) !important;
+  color: var(--button-text) !important;
+}
+
+.dark-mode-button:hover {
+  background-color: var(--button-hover-bg) !important;
+}
+
+.dark-mode-input {
+  background-color: var(--input-bg) !important;
+  border-color: var(--input-border) !important;
+  color: var(--input-text) !important;
+}
+
+/* Additional dark mode styles for specific components */
+[data-theme="dark"] .progress-container {
+  background-color: var(--bg-tertiary);
+}
+
+[data-theme="dark"] .task-completed {
+  color: var(--completed-text) !important;
+}
+
+[data-theme="dark"] .day-selector-btn {
+  background-color: var(--bg-tertiary);
+  color: var(--text-primary);
+}
+
+[data-theme="dark"] .day-selector-btn.active {
+  background-color: var(--accent-primary);
+  color: white;
+}
+
+[data-theme="dark"] .tab-button {
+  color: var(--text-primary);
+}
+
+[data-theme="dark"] .tab-button.active {
+  color: var(--accent-primary);
+}
+
+/* Fix for specific sections */
+[data-theme="dark"] #daily-schedule-body tr {
+  background-color: var(--bg-secondary);
+}
+
+[data-theme="dark"] #daily-schedule-body tr:nth-child(even) {
+  background-color: var(--bg-tertiary);
+}
+
+[data-theme="dark"] .month-tab-button {
+  background-color: var(--bg-tertiary);
+  color: var(--text-primary);
+}
+
+[data-theme="dark"] .month-tab-button.active {
+  background-color: var(--accent-primary);
+  color: white;
+}
+
+/* Fix for pomodoro timer */
+[data-theme="dark"] .pomodoro-container {
+  background-color: var(--bg-secondary);
+}
+
+[data-theme="dark"] .timer-display {
+  color: var(--text-primary);
+}
+
+/* Fix for modal dialogs */
+[data-theme="dark"] .modal-content {
+  background-color: var(--bg-secondary);
+  color: var(--text-primary);
+}
+
+[data-theme="dark"] .modal-header {
+  border-bottom-color: var(--border-color);
+}
+
+[data-theme="dark"] .modal-footer {
+  border-top-color: var(--border-color);
+}

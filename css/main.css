@@ -1,0 +1,217 @@
+/* Main CSS Styles */
+:root {
+  --bg-primary: #f5f5f4;
+  --bg-secondary: #ffffff;
+  --text-primary: #44403c;
+  --text-secondary: #78716c;
+  --accent-primary: #0d9488;
+  --accent-secondary: #38bdf8;
+  --border-color: #e7e5e4;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+  --scrollbar-track: #f1f5f9;
+  --scrollbar-thumb: #94a3b8;
+  --scrollbar-thumb-hover: #64748b;
+  --focus-outline: #38bdf8;
+  --focus-bg: #f0f9ff;
+  --completed-text: #6b7280;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  transition: background-color 0.3s ease, color 0.3s ease,
+    border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.bg-white {
+  background-color: var(--bg-secondary) !important;
+}
+
+.bg-stone-50 {
+  background-color: var(--bg-secondary) !important;
+}
+
+.bg-stone-100 {
+  background-color: var(--bg-primary) !important;
+}
+
+.text-stone-800 {
+  color: var(--text-primary) !important;
+}
+
+.text-stone-700 {
+  color: var(--text-primary) !important;
+}
+
+.text-stone-600 {
+  color: var(--text-secondary) !important;
+}
+
+.text-stone-500 {
+  color: var(--text-secondary) !important;
+}
+
+.border-stone-200,
+.border-stone-300 {
+  border-color: var(--border-color) !important;
+}
+
+.shadow,
+.shadow-lg,
+.shadow-xl {
+  box-shadow: 0 4px 6px var(--shadow-color) !important;
+}
+
+/* Table styles */
+table {
+  border-color: var(--border-color);
+  transition: background-color 0.3s ease, color 0.3s ease,
+    border-color 0.3s ease;
+}
+
+thead {
+  background-color: var(--bg-primary);
+  transition: background-color 0.3s ease;
+}
+
+tbody tr {
+  background-color: var(--bg-secondary);
+  transition: background-color 0.3s ease;
+}
+
+th,
+td {
+  color: var(--text-primary);
+  border-color: var(--border-color);
+  transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Card styles */
+.card,
+.rounded-lg {
+  background-color: var(--bg-secondary);
+  border-color: var(--border-color);
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.tab-button.active {
+  border-bottom-width: 2px;
+  border-color: var(--accent-primary);
+  color: var(--accent-primary);
+  font-weight: 600;
+}
+
+.nav-button.active {
+  background-color: var(--accent-primary);
+  color: white;
+}
+
+.chart-container {
+  position: relative;
+  width: 100%;
+  max-width: 400px; /* Adjusted for pie chart aesthetics */
+  margin-left: auto;
+  margin-right: auto;
+  height: 300px; /* Base height */
+  max-height: 350px;
+}
+
+@media (min-width: 640px) {
+  /* sm */
+  .chart-container {
+    height: 350px;
+    max-height: 400px;
+  }
+}
+
+/* Custom scrollbar for better aesthetics */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--scrollbar-track);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-thumb);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--scrollbar-thumb-hover);
+}
+
+.task-completed span {
+  text-decoration: line-through;
+  color: var(--completed-text);
+}
+
+[contenteditable]:focus {
+  outline: 2px solid var(--focus-outline);
+  background-color: var(--focus-bg);
+}
+
+/* Drag and drop styles */
+.draggable {
+  cursor: move;
+}
+
+.dragging {
+  opacity: 0.5;
+  background-color: var(--focus-bg);
+}
+
+/* Mobile Optimizations */
+@media (max-width: 640px) {
+  .mobile-full-width {
+    width: 100% !important;
+  }
+
+  .mobile-stack {
+    flex-direction: column !important;
+  }
+
+  .mobile-text-sm {
+    font-size: 0.875rem !important;
+  }
+
+  .mobile-p-2 {
+    padding: 0.5rem !important;
+  }
+
+  .mobile-hidden {
+    display: none !important;
+  }
+}
+
+/* Notification Badge */
+.notification-badge {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background-color: #ef4444;
+  color: white;
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Notes Panel */
+.notes-panel {
+  border-left: 3px solid var(--accent-primary);
+  padding-left: 0.75rem;
+  margin: 0.5rem 0;
+}
+
+/* Analytics Charts */
+.analytics-chart-container {
+  height: 250px;
+  margin-bottom: 1.5rem;
+}
