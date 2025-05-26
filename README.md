@@ -27,6 +27,10 @@ An interactive web application to help students prepare for placement exams and 
 - Tailwind CSS for styling
 - Chart.js for data visualization
 
+## Preview
+
+https://rohit-paneru.github.io/timebuddy/
+
 ## License
 
 This project is open source and available under the MIT License.
